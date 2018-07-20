@@ -1,4 +1,5 @@
-## Build Documentation:
+## Build Documentation:  
+This is a template of multi-language documents
 #### Install Requirements
 
 ```python
@@ -6,22 +7,18 @@ pip install -r requirements.txt
 ```
 create a new dir named as the language such as zh,cp all the things in Template to zh.  
 #### Build Documentation
-`python generate.py language action option`
+`python generate.py language option`
 if you build at the first time, run
 ```python
-python generate.py -l zh -a fbuild
-```  
-if your network is not good enough to clone the submodule,run  
-``python
-python generate.py -l zh -a fbuild -r
-``  
+python generate.py zh fbuild
+```
 if the main project update, run
 ```python
-python generate.py -l zh -a rebuild
+python generate.py zh rebuild
 ```
 if you modify the po files, run
 ```python
-python generate.py -l zh -a update
+python generate.py zh update
 ```
 
 ##Notice
