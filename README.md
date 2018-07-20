@@ -2,7 +2,7 @@
 #### Install Requirements
 
 ```python
-pip install -r requirements.txt
+pip install -r docs/requirements.txt
 ```
 create a new dir named as the language such as zh,cp all the things in Template to zh.  
 #### Build Documentation
