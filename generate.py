@@ -1,6 +1,9 @@
 import os
 import sys
 import argparse
+import platform
+
+os_plat=platform.system()
 
 parser = argparse.ArgumentParser(description='Generate multi-language documents from template.')
 parser.add_argument('-l', '--language', help='the language which is used to generate',type=str)
@@ -33,13 +36,21 @@ if action == 'fbuild':  # first build
     os.system('sphinx-intl update -p _build/gettext -l ' + language)
     os.system('sphinx-intl build')
     os.system('sphinx-intl stat')
-    os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
+    if os_plat=='Windows':
+        os.system('set SPHINXOPTS=-D language={}'.format(language))
+        os.system('make.bat html')
+    else:
+        os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
 elif action == 'update':
     os.chdir(doc_path)
     os.system('sphinx-intl build')
     os.system('sphinx-intl stat')
     os.system('make clean')
-    os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
+    if os_plat=='Windows':
+        os.system('set SPHINXOPTS=-D language={}'.format(language))
+        os.system('make.bat html')
+    else:
+        os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
 elif action == 'rebuild':  # main project update
     os.chdir(root_dir)
     os.system('git submodule update --remote')
@@ -49,6 +60,10 @@ elif action == 'rebuild':  # main project update
     os.system('sphinx-intl update -p _build/gettext -l ' + language)
     os.system('sphinx-intl build')
     os.system('sphinx-intl stat')
-    os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
+    if os_plat=='Windows':
+        os.system('set SPHINXOPTS=-D language={}'.format(language))
+        os.system('make.bat html')
+    else:
+        os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
 else:
     print ('wrong action')
