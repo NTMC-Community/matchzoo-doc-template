@@ -52,6 +52,8 @@ elif action == 'update':
     else:
         os.system('''make -e SPHINXOPTS="-D language='{}'" html'''.format(language))
 elif action == 'rebuild':  # main project update
+    os.chdir(doc_path)
+    os.system('make clean')
     os.chdir(root_dir)
     os.system('git submodule update --remote')
     os.chdir(doc_path)
