@@ -12,7 +12,7 @@ parser.add_argument('-r', '--rgit', nargs='?', const='rgit',default=None,
                     help='using rgit.sh to add submodule, '\
                          'using this option when your network is not good enough to clone all the submodule.'\
                          'only using this option when action==fbuild')
-submodule_address=r'https://github.com/NTSC-Community/MatchZoo.git'
+submodule_address=r'https://github.com/NTMC-Community/MatchZoo.git'
 args = parser.parse_args()
 action=args.action
 language=args.language
