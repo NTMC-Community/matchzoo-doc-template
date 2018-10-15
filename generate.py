@@ -12,6 +12,7 @@ parser.add_argument('-r', '--rgit', nargs='?', const='rgit',default=None,
                     help='using rgit.sh to add submodule, '\
                          'using this option when your network is not good enough to clone all the submodule.'\
                          'only using this option when action==fbuild')
+submodule_address=r'https://github.com/NTSC-Community/MatchZoo.git'
 args = parser.parse_args()
 action=args.action
 language=args.language
@@ -25,9 +26,9 @@ if action == 'fbuild':  # first build
     os.system('git config http.postBuffer 524288000')  # 2000000000
     if rgit=='rgit':
         print('using ResumableGitClone')
-        os.system('bash rgit.sh https://github.com/faneshion/MatchZoo')
+        os.system('bash rgit.sh '+submodule_address)
     else:
-        os.system('git submodule add https://github.com/faneshion/MatchZoo')
+        os.system('git submodule add '+submodule_address)
     os.chdir(Matchzoo_path)
     os.system('git checkout 2.0')
     os.chdir(doc_path)
