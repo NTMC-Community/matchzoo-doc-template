@@ -15,15 +15,23 @@
 import os
 import sys
 
+
 sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('../../MatchZoo'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/engine'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/models'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/tasks'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/preprocessor'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/generators'))
-sys.path.insert(0, os.path.abspath('../../MatchZoo/matchzoo/utils'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/auto'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/data_generator'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/data_pack'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/datasets'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/engine'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/layers'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/losses'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/models'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/metrics'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/preprocessors'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/processor_units'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/utils'))
+sys.path.insert(0, os.path.abspath('../../Matchzoo/matchzoo/tasks'))
 
 
 
