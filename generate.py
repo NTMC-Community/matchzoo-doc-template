@@ -28,7 +28,7 @@ if action == 'fbuild':  # first build
         print('using ResumableGitClone')
         os.system('bash rgit.sh '+submodule_address)
     else:
-        os.system('git submodule add '+submodule_address)
+        os.system('git submodule add -f '+submodule_address)
     os.chdir(Matchzoo_path)
     os.system('git checkout master')
     os.chdir(doc_path)
