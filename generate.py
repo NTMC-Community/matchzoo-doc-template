@@ -30,7 +30,7 @@ if action == 'fbuild':  # first build
     else:
         os.system('git submodule add '+submodule_address)
     os.chdir(Matchzoo_path)
-    os.system('git checkout 2.0')
+    os.system('git checkout master')
     os.chdir(doc_path)
     os.system('sphinx-apidoc -o ./source ' + matchzoo_path)
     os.system('make gettext')
