@@ -7,12 +7,12 @@ Welcome to MatchZoo's documentation!
 ====================================
 
 
-.. image:: https://travis-ci.org/NTMC-Community/MatchZoo.svg?branch=2.0
+.. image:: https://travis-ci.org/NTMC-Community/MatchZoo.svg?branch=master
    :alt: ci
    :target: https://travis-ci.org/NTMC-Community/MatchZoo/
 
 
-.. image:: ../../MatchZoo/artworks/matchzoo-logo.png
+.. image:: ../../Matchzoo/artworks/matchzoo-logo.png
    :alt: logo
    :align: center
 
@@ -25,7 +25,7 @@ MatchZoo is a toolkit for text matching. It was developed with a focus on facili
    :caption: API Document:
 
    matchzoo
-
+   model_reference
 
 
 Indices and tables
